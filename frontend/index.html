@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 🔥 HEADER -->
+    <div class="header">
+      <h1 class="title">Task Manager</h1>
+      <button onclick="logout()" id="logoutBtn" class="logout-btn hidden">
+        Logout
+      </button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <!-- 🔐 AUTH SECTION -->
+    <div class="container" id="authSection">
+      <!-- REGISTER -->
+      <div class="card auth-card">
+        <h2>Create Account</h2>
+        <input id="regName" placeholder="Full Name" />
+        <input id="regEmail" placeholder="Email address" />
+        <input id="regPassword" type="password" placeholder="Password" />
+        <button onclick="register()" class="primary-btn">Register</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="card auth-card login-card">
+        <h2>Welcome Back</h2>
+        <input id="loginEmail" placeholder="Email address" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button onclick="login()" class="primary-btn">Login</button>
+      </div>
+    </div>
+
+    <!-- 📊 DASHBOARD -->
+    <div class="container hidden" id="dashboard">
+      <div class="card">
+        <h2>Create Task</h2>
+        <input id="taskTitle" placeholder="Title" />
+        <input id="taskDesc" placeholder="Description" />
+        <select id="taskStatus">
+          <option value="PENDING">PENDING</option>
+          <option value="IN_PROGRESS">IN_PROGRESS</option>
+          <option value="DONE">DONE</option>
+        </select>
+        <button onclick="createTask()" class="primary-btn">Create Task</button>
+      </div>
+
+      <div class="card">
+        <h2>Your Tasks</h2>
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

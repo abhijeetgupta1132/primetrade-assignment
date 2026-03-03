@@ -1,0 +1,14 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Node
+node_modules/
+
+# Build
+target/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
